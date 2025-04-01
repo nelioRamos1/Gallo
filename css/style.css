@@ -1,0 +1,375 @@
+body {
+    background-color: rgb(41, 38, 38);
+}
+
+.container {
+    max-width: 1420px;
+    max-height: 1420px;
+    z-index: -1;
+}
+
+.cabecalho {
+    background-color: rgb(48, 77, 1);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px;
+}
+
+.cabecalho .conteudo_cabecalho img {
+    margin: 0 10px;
+    border-radius: 100px;
+    height: 90px;
+    width: 90px;
+}
+
+.conteudo_cabecalho {
+    display: flex;
+    align-items: center;
+    background-color: rgb(48, 77, 1);
+}
+
+.nav {
+    display: flex;
+    justify-content: space-between;
+    width: 250px;
+    font-size: 20px;
+    padding: 30px;
+}
+
+.nav a {
+    color: white;
+    text-decoration: none;
+    padding: 0;
+    margin: 0;
+}
+
+
+
+.container_white {
+    background-color: rgb(214, 213, 213);
+    max-width: 1420px;
+    min-height: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 90px;
+}
+
+.informacoes {
+    max-width: 50%;
+    font-size: 1.2em;
+}
+
+.informacoes h1 b {
+    color: rgb(34, 54, 4);
+    font-size: 40px;
+}
+
+.informacoes p b {
+    color: rgb(85, 141, 0);
+    font-size: 21px;
+} 
+
+.container_white img {
+    max-width: 70%;
+    height: auto;
+    box-shadow: 10px 9px 8px rgba(0, 0, 0, 0.6);
+    margin-right: 1px;
+    margin-top: 30px;
+}
+
+.informacoes h1 {
+    margin-top: 10px;
+}
+
+.container_black {
+    position: relative;
+    max-width: 1420px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    overflow: hidden;
+}
+
+.container_black::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-image: url('/assets/image/gallo_img.jpg');
+    background-size: cover;
+    background-position: center;
+    opacity: 0.2;
+    z-index: -1;
+}
+
+.container_black h2 {
+    color: rgba(85, 141, 0, 0.904);
+    font-size: 31px;
+    z-index: 1;
+}
+
+.container_black p {
+    color: floralwhite;
+    font-size: 20px;
+    margin-bottom: -10px;
+    z-index: 1;
+}
+
+.container_black p b {
+    color: rgb(85, 141, 0);
+    font-size: 26px;
+} 
+
+.container-slider {
+    display: flex;
+    width: 100%;
+    min-height: 100vh;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.container-images {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 600px;
+    height: 500px;
+    overflow: hidden;
+}
+
+.slider {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: opacity .2s;
+    border-radius: 10px;
+    opacity: 0;
+}
+
+.on {
+    opacity: 1;
+}
+
+#prev-button, #next-button {
+    width: 100px;
+    height: 30px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+}
+
+#prev-button img, #next-button img {
+    width: 100%;
+    height: 100%;
+}
+
+#prev-button {
+    transform: rotate(180deg);
+}
+
+.promocao {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 100%;
+}
+
+.promocao h1 {
+    animation: movimento 2s infinite;
+    text-align: center;
+    margin-top: -50px;
+    font-size: 47px;
+    color: rgb(34, 54, 4);
+}
+
+#insta-icon {
+    font-size: 20px;
+    color: rgb(70, 116, 2);
+    margin-right: 3px;
+}
+
+.insta-link {
+    text-decoration: none;
+    font-size: 20px;
+    color: rgb(43, 92, 2);
+}
+
+.promo-text {
+    font-size: 20px;
+    margin-bottom: -5px;
+}
+
+.promo-text b {
+    color: rgb(70, 116, 2);
+    font-size: 23px;
+}
+
+.insta-foto {
+    margin: 20px 20px;
+    display: block;
+    border-radius: 20px;
+    width: 650px;
+}
+
+@keyframes movimento {
+    0% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+    100% { transform: translateY(0); }
+}
+
+.rodape {
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.rodape a {
+    margin-left: 10px;
+    color: white;
+    text-decoration: none;
+    margin-right: 10px;
+    font-size: 20px;
+    transition: transform 0.3s ease, color 0.3s ease;
+}
+
+.rodape a:hover {
+    transform: scale(1.2);
+    color: rgb(181, 201, 152);
+}
+
+.rodape a i {
+    color: rgba(0, 0, 0, 0.651);
+    font-size: 29px;
+    margin-right: 8px;
+}
+
+.gallo-icon {
+    margin-left: 20px;
+    border-radius: 50%;
+    width: 8%;
+}
+
+@media (max-width: 1200px) {
+    .nav {
+        width: 200px;
+    }
+
+    .container_white {
+        padding: 60px;
+    }
+
+    .informacoes {
+        max-width: 100%;
+        font-size: 1em;
+    }
+
+    .container_white img {
+        max-width: 100%;
+    }
+}
+
+@media (max-width: 768px) {
+    .cabecalho {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .nav {
+        width: 100%;
+        justify-content: space-around;
+    }
+
+    .container_white {
+        flex-direction: column;
+        align-items: center;
+        padding: 30px;
+    }
+
+    .informacoes {
+        max-width: 90%;
+    }
+
+    .container-slider {
+        flex-direction: column;
+    }
+
+    #prev-button, #next-button {
+        width: 80px;
+    }
+
+    .promocao h1 {
+        font-size: 36px;
+    }
+
+    .insta-foto {
+        width: 90%;
+    }
+}
+
+@keyframes moverConstante {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(100vw); /* Mover até 100% da largura da viewport */
+    }
+}
+
+@media (max-width: 480px) {
+    .promocao h1 {
+        font-size: 36px;
+        margin-top: 20px;
+    }
+    .cabecalho {
+        padding: 5px;
+    }
+
+    .cabecalho .conteudo_cabecalho img {
+        animation: moverConstante 5s linear infinite;
+        position: relative; 
+        white-space: nowrap; 
+        margin-bottom: 10px;
+    }
+
+    .nav {
+        flex-direction: column;
+        align-items: center;
+        padding: 10px;
+        font-size: 22px;
+        margin-top: -29px;
+    }
+
+    .nav a {
+        margin-bottom: 10px;
+        margin-top: 10px;
+    }
+
+    .container_white {
+        padding: 20px;
+    }
+
+    .informacoes h1 {
+        font-size: 28px;
+    }
+
+    .promo-text {
+        font-size: 18px;
+    }
+
+    .rodape a {
+        font-size: 16px;
+    }
+}
